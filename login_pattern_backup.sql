@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict g3z8D9RRtkVWYPzqi46Zmtt9w19g4Sn9wGf0XX3NXHsjBH1DnbeYQLRd9ddhOCQ
+\restrict RHTIcpmoqJv6IGYLt2ZD5XcJvP2OMtmxgmpzyjRIwQEzgJPZhTfegdne0w8BlJN
 
 -- Dumped from database version 18.4
 -- Dumped by pg_dump version 18.4
 
--- Started on 2026-05-22 20:21:16
+-- Started on 2026-05-22 21:04:29
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -31,11 +31,11 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.user_login_logs (
-    id bigint NOT NULL,
+    log_id bigint CONSTRAINT user_login_logs_id_not_null NOT NULL,
     username character varying(100),
     login_time timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     ip_address inet,
-    location character varying(100),
+    login_location character varying(100),
     device jsonb,
     status character varying(20)
 );
@@ -64,7 +64,7 @@ ALTER SEQUENCE public.user_login_logs_id_seq OWNER TO postgres;
 -- Name: user_login_logs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.user_login_logs_id_seq OWNED BY public.user_login_logs.id;
+ALTER SEQUENCE public.user_login_logs_id_seq OWNED BY public.user_login_logs.log_id;
 
 
 --
@@ -73,7 +73,7 @@ ALTER SEQUENCE public.user_login_logs_id_seq OWNED BY public.user_login_logs.id;
 --
 
 CREATE TABLE public.users (
-    serial integer NOT NULL,
+    uid integer CONSTRAINT users_serial_not_null NOT NULL,
     username character varying(100) NOT NULL,
     password_hash character varying(255) NOT NULL,
     is_active boolean DEFAULT true,
@@ -106,23 +106,23 @@ ALTER SEQUENCE public.users_serial_seq OWNER TO postgres;
 -- Name: users_serial_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.users_serial_seq OWNED BY public.users.serial;
+ALTER SEQUENCE public.users_serial_seq OWNED BY public.users.uid;
 
 
 --
 -- TOC entry 4864 (class 2604 OID 16408)
--- Name: user_login_logs id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: user_login_logs log_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.user_login_logs ALTER COLUMN id SET DEFAULT nextval('public.user_login_logs_id_seq'::regclass);
+ALTER TABLE ONLY public.user_login_logs ALTER COLUMN log_id SET DEFAULT nextval('public.user_login_logs_id_seq'::regclass);
 
 
 --
 -- TOC entry 4861 (class 2604 OID 16393)
--- Name: users serial; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: users uid; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.users ALTER COLUMN serial SET DEFAULT nextval('public.users_serial_seq'::regclass);
+ALTER TABLE ONLY public.users ALTER COLUMN uid SET DEFAULT nextval('public.users_serial_seq'::regclass);
 
 
 --
@@ -131,7 +131,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN serial SET DEFAULT nextval('public.us
 -- Data for Name: user_login_logs; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.user_login_logs (id, username, login_time, ip_address, location, device, status) FROM stdin;
+COPY public.user_login_logs (log_id, username, login_time, ip_address, login_location, device, status) FROM stdin;
 \.
 
 
@@ -141,7 +141,7 @@ COPY public.user_login_logs (id, username, login_time, ip_address, location, dev
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.users (serial, username, password_hash, is_active, enter_by, entry_date_time) FROM stdin;
+COPY public.users (uid, username, password_hash, is_active, enter_by, entry_date_time) FROM stdin;
 \.
 
 
@@ -169,7 +169,7 @@ SELECT pg_catalog.setval('public.users_serial_seq', 1, false);
 --
 
 ALTER TABLE ONLY public.user_login_logs
-    ADD CONSTRAINT user_login_logs_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT user_login_logs_pkey PRIMARY KEY (log_id);
 
 
 --
@@ -178,7 +178,7 @@ ALTER TABLE ONLY public.user_login_logs
 --
 
 ALTER TABLE ONLY public.users
-    ADD CONSTRAINT users_pkey PRIMARY KEY (serial);
+    ADD CONSTRAINT users_pkey PRIMARY KEY (uid);
 
 
 --
@@ -199,11 +199,11 @@ ALTER TABLE ONLY public.user_login_logs
     ADD CONSTRAINT user_login_logs_username_fkey FOREIGN KEY (username) REFERENCES public.users(username);
 
 
--- Completed on 2026-05-22 20:21:17
+-- Completed on 2026-05-22 21:04:29
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict g3z8D9RRtkVWYPzqi46Zmtt9w19g4Sn9wGf0XX3NXHsjBH1DnbeYQLRd9ddhOCQ
+\unrestrict RHTIcpmoqJv6IGYLt2ZD5XcJvP2OMtmxgmpzyjRIwQEzgJPZhTfegdne0w8BlJN
 
