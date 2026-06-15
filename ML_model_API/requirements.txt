@@ -1,0 +1,10 @@
+pandas
+numpy
+statsforecast
+utilsforecast
+fastapi
+uvicorn
+pydantic
+scikit-learn
+python-multipart
+prophet

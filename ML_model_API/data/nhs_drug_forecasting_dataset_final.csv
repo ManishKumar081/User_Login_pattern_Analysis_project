@@ -1,0 +1,521 @@
+ds,drug,y
+2020-11-01,Atorvastatin,705974.0
+2020-12-01,Atorvastatin,795739.0
+2021-01-01,Atorvastatin,826006.0
+2021-02-01,Atorvastatin,748542.0
+2021-03-01,Atorvastatin,865732.0
+2021-04-01,Atorvastatin,755792.0
+2021-05-01,Atorvastatin,736011.0
+2021-06-01,Atorvastatin,864640.0
+2021-07-01,Atorvastatin,914448.0
+2021-08-01,Atorvastatin,782202.0
+2021-09-01,Atorvastatin,773698.0
+2021-10-01,Atorvastatin,918963.0
+2021-11-01,Atorvastatin,767918.0
+2021-12-01,Atorvastatin,863601.0
+2022-01-01,Atorvastatin,872461.0
+2022-02-01,Atorvastatin,135749.0
+2022-03-01,Atorvastatin,748775.0
+2022-04-01,Atorvastatin,869209.0
+2022-05-01,Atorvastatin,510497.0
+2022-06-01,Atorvastatin,940116.0
+2022-07-01,Atorvastatin,417091.0
+2022-08-01,Atorvastatin,1044909.0
+2022-09-01,Atorvastatin,869250.0
+2022-10-01,Atorvastatin,905672.0
+2022-11-01,Atorvastatin,810569.0
+2022-12-01,Atorvastatin,851068.0
+2023-01-01,Atorvastatin,1035381.0
+2023-02-01,Atorvastatin,1040226.0
+2023-03-01,Atorvastatin,1022866.0
+2023-04-01,Atorvastatin,1008431.0
+2023-05-01,Atorvastatin,1054677.0
+2023-06-01,Atorvastatin,938585.0
+2023-07-01,Atorvastatin,998639.0
+2023-08-01,Atorvastatin,1023851.0
+2023-09-01,Atorvastatin,1082114.0
+2023-10-01,Atorvastatin,931771.0
+2023-11-01,Atorvastatin,1078007.0
+2023-12-01,Atorvastatin,1081946.0
+2024-01-01,Atorvastatin,1068854.0
+2024-02-01,Atorvastatin,1011610.0
+2024-03-01,Atorvastatin,984388.0
+2024-04-01,Atorvastatin,1077509.0
+2024-05-01,Atorvastatin,998796.0
+2024-06-01,Atorvastatin,939358.0
+2024-07-01,Atorvastatin,808101.0
+2024-08-01,Atorvastatin,214533.0
+2024-09-01,Atorvastatin,887337.0
+2024-10-01,Atorvastatin,1094656.0
+2024-11-01,Atorvastatin,1135983.0
+2024-12-01,Atorvastatin,1108063.0
+2025-01-01,Atorvastatin,1115332.0
+2025-02-01,Atorvastatin,1131683.0
+2025-03-01,Atorvastatin,431993.0
+2025-04-01,Atorvastatin,1212302.0
+2025-05-01,Atorvastatin,1033431.0
+2025-06-01,Atorvastatin,1171707.0
+2025-07-01,Atorvastatin,1273335.0
+2025-08-01,Atorvastatin,1097261.0
+2025-09-01,Atorvastatin,625149.0
+2025-10-01,Atorvastatin,1258233.0
+2025-11-01,Atorvastatin,1050704.0
+2025-12-01,Atorvastatin,1187684.0
+2026-01-01,Atorvastatin,1241770.0
+2026-02-01,Atorvastatin,1067329.0
+2026-03-01,Atorvastatin,1114436.0
+2020-11-01,Gabapentin,375593.0
+2020-12-01,Gabapentin,392515.0
+2021-01-01,Gabapentin,387846.0
+2021-02-01,Gabapentin,344685.0
+2021-03-01,Gabapentin,406131.0
+2021-04-01,Gabapentin,372495.0
+2021-05-01,Gabapentin,456099.0
+2021-06-01,Gabapentin,390609.0
+2021-07-01,Gabapentin,352966.0
+2021-08-01,Gabapentin,371643.0
+2021-09-01,Gabapentin,371248.0
+2021-10-01,Gabapentin,379568.0
+2021-11-01,Gabapentin,363845.0
+2021-12-01,Gabapentin,429548.0
+2022-01-01,Gabapentin,416405.0
+2022-02-01,Gabapentin,72780.0
+2022-03-01,Gabapentin,384253.0
+2022-04-01,Gabapentin,386867.0
+2022-05-01,Gabapentin,193374.0
+2022-06-01,Gabapentin,418039.0
+2022-07-01,Gabapentin,212423.0
+2022-08-01,Gabapentin,333401.0
+2022-09-01,Gabapentin,367019.0
+2022-10-01,Gabapentin,393055.0
+2022-11-01,Gabapentin,384276.0
+2022-12-01,Gabapentin,443378.0
+2023-01-01,Gabapentin,370048.0
+2023-02-01,Gabapentin,311486.0
+2023-03-01,Gabapentin,387666.0
+2023-04-01,Gabapentin,350667.0
+2023-05-01,Gabapentin,379428.0
+2023-06-01,Gabapentin,371202.0
+2023-07-01,Gabapentin,366073.0
+2023-08-01,Gabapentin,390535.0
+2023-09-01,Gabapentin,335253.0
+2023-10-01,Gabapentin,385153.0
+2023-11-01,Gabapentin,327234.0
+2023-12-01,Gabapentin,365712.0
+2024-01-01,Gabapentin,369332.0
+2024-02-01,Gabapentin,344568.0
+2024-03-01,Gabapentin,370783.0
+2024-04-01,Gabapentin,355439.0
+2024-05-01,Gabapentin,323742.0
+2024-06-01,Gabapentin,400236.0
+2024-07-01,Gabapentin,384093.0
+2024-08-01,Gabapentin,71270.0
+2024-09-01,Gabapentin,313834.0
+2024-10-01,Gabapentin,366263.0
+2024-11-01,Gabapentin,326597.0
+2024-12-01,Gabapentin,304718.0
+2025-01-01,Gabapentin,339334.0
+2025-02-01,Gabapentin,392224.0
+2025-03-01,Gabapentin,148471.0
+2025-04-01,Gabapentin,361995.0
+2025-05-01,Gabapentin,349718.0
+2025-06-01,Gabapentin,342497.0
+2025-07-01,Gabapentin,392361.0
+2025-08-01,Gabapentin,362336.0
+2025-09-01,Gabapentin,139625.0
+2025-10-01,Gabapentin,362339.0
+2025-11-01,Gabapentin,334801.0
+2025-12-01,Gabapentin,374763.0
+2026-01-01,Gabapentin,340409.0
+2026-02-01,Gabapentin,341113.0
+2026-03-01,Gabapentin,384847.0
+2020-11-01,Levothyroxine sodium,585521.0
+2020-12-01,Levothyroxine sodium,588692.0
+2021-01-01,Levothyroxine sodium,662105.0
+2021-02-01,Levothyroxine sodium,570580.0
+2021-03-01,Levothyroxine sodium,635160.0
+2021-04-01,Levothyroxine sodium,556762.0
+2021-05-01,Levothyroxine sodium,471861.0
+2021-06-01,Levothyroxine sodium,668572.0
+2021-07-01,Levothyroxine sodium,624559.0
+2021-08-01,Levothyroxine sodium,511758.0
+2021-09-01,Levothyroxine sodium,610178.0
+2021-10-01,Levothyroxine sodium,418790.0
+2021-11-01,Levothyroxine sodium,574756.0
+2021-12-01,Levothyroxine sodium,606726.0
+2022-01-01,Levothyroxine sodium,540666.0
+2022-02-01,Levothyroxine sodium,113166.0
+2022-03-01,Levothyroxine sodium,569084.0
+2022-04-01,Levothyroxine sodium,610947.0
+2022-05-01,Levothyroxine sodium,275559.0
+2022-06-01,Levothyroxine sodium,607451.0
+2022-07-01,Levothyroxine sodium,297120.0
+2022-08-01,Levothyroxine sodium,592235.0
+2022-09-01,Levothyroxine sodium,573035.0
+2022-10-01,Levothyroxine sodium,546057.0
+2022-11-01,Levothyroxine sodium,550622.0
+2022-12-01,Levothyroxine sodium,565354.0
+2023-01-01,Levothyroxine sodium,524912.0
+2023-02-01,Levothyroxine sodium,620468.0
+2023-03-01,Levothyroxine sodium,574226.0
+2023-04-01,Levothyroxine sodium,646877.0
+2023-05-01,Levothyroxine sodium,569294.0
+2023-06-01,Levothyroxine sodium,503756.0
+2023-07-01,Levothyroxine sodium,605957.0
+2023-08-01,Levothyroxine sodium,533093.0
+2023-09-01,Levothyroxine sodium,561385.0
+2023-10-01,Levothyroxine sodium,626817.0
+2023-11-01,Levothyroxine sodium,599518.0
+2023-12-01,Levothyroxine sodium,584742.0
+2024-01-01,Levothyroxine sodium,579517.0
+2024-02-01,Levothyroxine sodium,558050.0
+2024-03-01,Levothyroxine sodium,520998.0
+2024-04-01,Levothyroxine sodium,624979.0
+2024-05-01,Levothyroxine sodium,610918.0
+2024-06-01,Levothyroxine sodium,555847.0
+2024-07-01,Levothyroxine sodium,564628.0
+2024-08-01,Levothyroxine sodium,96105.0
+2024-09-01,Levothyroxine sodium,540070.0
+2024-10-01,Levothyroxine sodium,623689.0
+2024-11-01,Levothyroxine sodium,514933.0
+2024-12-01,Levothyroxine sodium,610486.0
+2025-01-01,Levothyroxine sodium,582203.0
+2025-02-01,Levothyroxine sodium,526537.0
+2025-03-01,Levothyroxine sodium,281540.0
+2025-04-01,Levothyroxine sodium,621998.0
+2025-05-01,Levothyroxine sodium,513164.0
+2025-06-01,Levothyroxine sodium,612885.0
+2025-07-01,Levothyroxine sodium,606846.0
+2025-08-01,Levothyroxine sodium,581418.0
+2025-09-01,Levothyroxine sodium,224870.0
+2025-10-01,Levothyroxine sodium,555364.0
+2025-11-01,Levothyroxine sodium,528624.0
+2025-12-01,Levothyroxine sodium,659143.0
+2026-01-01,Levothyroxine sodium,484075.0
+2026-02-01,Levothyroxine sodium,603246.0
+2026-03-01,Levothyroxine sodium,589983.0
+2020-11-01,Metformin hydrochloride,963109.0
+2020-12-01,Metformin hydrochloride,931976.0
+2021-01-01,Metformin hydrochloride,897245.0
+2021-02-01,Metformin hydrochloride,1088589.0
+2021-03-01,Metformin hydrochloride,982258.0
+2021-04-01,Metformin hydrochloride,1129673.0
+2021-05-01,Metformin hydrochloride,904227.0
+2021-06-01,Metformin hydrochloride,1088481.0
+2021-07-01,Metformin hydrochloride,1002508.0
+2021-08-01,Metformin hydrochloride,986361.0
+2021-09-01,Metformin hydrochloride,1111058.0
+2021-10-01,Metformin hydrochloride,820799.0
+2021-11-01,Metformin hydrochloride,1083518.0
+2021-12-01,Metformin hydrochloride,1009702.0
+2022-01-01,Metformin hydrochloride,884093.0
+2022-02-01,Metformin hydrochloride,193436.0
+2022-03-01,Metformin hydrochloride,1046830.0
+2022-04-01,Metformin hydrochloride,959602.0
+2022-05-01,Metformin hydrochloride,436144.0
+2022-06-01,Metformin hydrochloride,1120924.0
+2022-07-01,Metformin hydrochloride,425826.0
+2022-08-01,Metformin hydrochloride,1026559.0
+2022-09-01,Metformin hydrochloride,1070482.0
+2022-10-01,Metformin hydrochloride,856120.0
+2022-11-01,Metformin hydrochloride,959383.0
+2022-12-01,Metformin hydrochloride,983176.0
+2023-01-01,Metformin hydrochloride,1100242.0
+2023-02-01,Metformin hydrochloride,1079183.0
+2023-03-01,Metformin hydrochloride,1063318.0
+2023-04-01,Metformin hydrochloride,1015757.0
+2023-05-01,Metformin hydrochloride,984102.0
+2023-06-01,Metformin hydrochloride,886564.0
+2023-07-01,Metformin hydrochloride,996006.0
+2023-08-01,Metformin hydrochloride,901446.0
+2023-09-01,Metformin hydrochloride,991718.0
+2023-10-01,Metformin hydrochloride,954219.0
+2023-11-01,Metformin hydrochloride,997977.0
+2023-12-01,Metformin hydrochloride,1018363.0
+2024-01-01,Metformin hydrochloride,938531.0
+2024-02-01,Metformin hydrochloride,1103073.0
+2024-03-01,Metformin hydrochloride,1059373.0
+2024-04-01,Metformin hydrochloride,1079776.0
+2024-05-01,Metformin hydrochloride,1169071.0
+2024-06-01,Metformin hydrochloride,906488.0
+2024-07-01,Metformin hydrochloride,1166938.0
+2024-08-01,Metformin hydrochloride,210438.0
+2024-09-01,Metformin hydrochloride,1158284.0
+2024-10-01,Metformin hydrochloride,1103758.0
+2024-11-01,Metformin hydrochloride,1210874.0
+2024-12-01,Metformin hydrochloride,1298294.0
+2025-01-01,Metformin hydrochloride,931878.0
+2025-02-01,Metformin hydrochloride,1194116.0
+2025-03-01,Metformin hydrochloride,575198.0
+2025-04-01,Metformin hydrochloride,1071865.0
+2025-05-01,Metformin hydrochloride,1140049.0
+2025-06-01,Metformin hydrochloride,988799.0
+2025-07-01,Metformin hydrochloride,978141.0
+2025-08-01,Metformin hydrochloride,1045569.0
+2025-09-01,Metformin hydrochloride,598261.0
+2025-10-01,Metformin hydrochloride,1106062.0
+2025-11-01,Metformin hydrochloride,1121707.0
+2025-12-01,Metformin hydrochloride,1281717.0
+2026-01-01,Metformin hydrochloride,923672.0
+2026-02-01,Metformin hydrochloride,987320.0
+2026-03-01,Metformin hydrochloride,1030442.0
+2020-11-01,Paracetamol,1161932.0
+2020-12-01,Paracetamol,1249746.0
+2021-01-01,Paracetamol,1127654.0
+2021-02-01,Paracetamol,1066931.0
+2021-03-01,Paracetamol,1236833.0
+2021-04-01,Paracetamol,1166744.0
+2021-05-01,Paracetamol,1279209.0
+2021-06-01,Paracetamol,1460687.0
+2021-07-01,Paracetamol,1254037.0
+2021-08-01,Paracetamol,1174059.0
+2021-09-01,Paracetamol,1299536.0
+2021-10-01,Paracetamol,1267758.0
+2021-11-01,Paracetamol,1189178.0
+2021-12-01,Paracetamol,1452581.0
+2022-01-01,Paracetamol,1239562.0
+2022-02-01,Paracetamol,216767.0
+2022-03-01,Paracetamol,1200306.0
+2022-04-01,Paracetamol,1094437.0
+2022-05-01,Paracetamol,626393.0
+2022-06-01,Paracetamol,1333799.0
+2022-07-01,Paracetamol,744616.0
+2022-08-01,Paracetamol,1257862.0
+2022-09-01,Paracetamol,1074032.0
+2022-10-01,Paracetamol,1317112.0
+2022-11-01,Paracetamol,1361831.0
+2022-12-01,Paracetamol,1507224.0
+2023-01-01,Paracetamol,947267.0
+2023-02-01,Paracetamol,1122782.0
+2023-03-01,Paracetamol,1190548.0
+2023-04-01,Paracetamol,1306817.0
+2023-05-01,Paracetamol,1074359.0
+2023-06-01,Paracetamol,1245903.0
+2023-07-01,Paracetamol,1330878.0
+2023-08-01,Paracetamol,1260307.0
+2023-09-01,Paracetamol,1116682.0
+2023-10-01,Paracetamol,1324399.0
+2023-11-01,Paracetamol,1310045.0
+2023-12-01,Paracetamol,1242641.0
+2024-01-01,Paracetamol,1428658.0
+2024-02-01,Paracetamol,1080086.0
+2024-03-01,Paracetamol,1176947.0
+2024-04-01,Paracetamol,1359893.0
+2024-05-01,Paracetamol,1125582.0
+2024-06-01,Paracetamol,1133199.0
+2024-07-01,Paracetamol,1493900.0
+2024-08-01,Paracetamol,184060.0
+2024-09-01,Paracetamol,1177884.0
+2024-10-01,Paracetamol,1289496.0
+2024-11-01,Paracetamol,1344829.0
+2024-12-01,Paracetamol,1157555.0
+2025-01-01,Paracetamol,1205121.0
+2025-02-01,Paracetamol,1130657.0
+2025-03-01,Paracetamol,550012.0
+2025-04-01,Paracetamol,1190600.0
+2025-05-01,Paracetamol,1278008.0
+2025-06-01,Paracetamol,1291299.0
+2025-07-01,Paracetamol,1401944.0
+2025-08-01,Paracetamol,1105167.0
+2025-09-01,Paracetamol,599916.0
+2025-10-01,Paracetamol,1291242.0
+2025-11-01,Paracetamol,1326219.0
+2025-12-01,Paracetamol,1315335.0
+2026-01-01,Paracetamol,1323314.0
+2026-02-01,Paracetamol,1170999.0
+2026-03-01,Paracetamol,1234470.0
+2020-11-01,Pregabalin,198272.0
+2020-12-01,Pregabalin,216703.0
+2021-01-01,Pregabalin,200123.0
+2021-02-01,Pregabalin,200387.0
+2021-03-01,Pregabalin,195922.0
+2021-04-01,Pregabalin,185065.0
+2021-05-01,Pregabalin,209225.0
+2021-06-01,Pregabalin,216752.0
+2021-07-01,Pregabalin,209489.0
+2021-08-01,Pregabalin,209861.0
+2021-09-01,Pregabalin,220285.0
+2021-10-01,Pregabalin,198866.0
+2021-11-01,Pregabalin,214007.0
+2021-12-01,Pregabalin,222965.0
+2022-01-01,Pregabalin,190089.0
+2022-02-01,Pregabalin,39660.0
+2022-03-01,Pregabalin,226804.0
+2022-04-01,Pregabalin,231508.0
+2022-05-01,Pregabalin,115074.0
+2022-06-01,Pregabalin,224685.0
+2022-07-01,Pregabalin,105540.0
+2022-08-01,Pregabalin,252713.0
+2022-09-01,Pregabalin,218806.0
+2022-10-01,Pregabalin,211988.0
+2022-11-01,Pregabalin,201546.0
+2022-12-01,Pregabalin,238930.0
+2023-01-01,Pregabalin,230248.0
+2023-02-01,Pregabalin,192222.0
+2023-03-01,Pregabalin,218166.0
+2023-04-01,Pregabalin,198540.0
+2023-05-01,Pregabalin,221360.0
+2023-06-01,Pregabalin,205557.0
+2023-07-01,Pregabalin,239877.0
+2023-08-01,Pregabalin,228950.0
+2023-09-01,Pregabalin,248585.0
+2023-10-01,Pregabalin,224726.0
+2023-11-01,Pregabalin,244726.0
+2023-12-01,Pregabalin,220230.0
+2024-01-01,Pregabalin,221048.0
+2024-02-01,Pregabalin,226673.0
+2024-03-01,Pregabalin,244445.0
+2024-04-01,Pregabalin,241060.0
+2024-05-01,Pregabalin,236526.0
+2024-06-01,Pregabalin,218306.0
+2024-07-01,Pregabalin,242140.0
+2024-08-01,Pregabalin,42540.0
+2024-09-01,Pregabalin,219357.0
+2024-10-01,Pregabalin,232942.0
+2024-11-01,Pregabalin,233007.0
+2024-12-01,Pregabalin,227793.0
+2025-01-01,Pregabalin,253736.0
+2025-02-01,Pregabalin,239150.0
+2025-03-01,Pregabalin,109190.0
+2025-04-01,Pregabalin,231155.0
+2025-05-01,Pregabalin,224062.0
+2025-06-01,Pregabalin,245819.0
+2025-07-01,Pregabalin,261587.0
+2025-08-01,Pregabalin,231971.0
+2025-09-01,Pregabalin,119444.0
+2025-10-01,Pregabalin,239946.0
+2025-11-01,Pregabalin,242201.0
+2025-12-01,Pregabalin,253067.0
+2026-01-01,Pregabalin,244374.0
+2026-02-01,Pregabalin,241163.0
+2026-03-01,Pregabalin,243883.0
+2020-11-01,Ramipril,470428.0
+2020-12-01,Ramipril,556924.0
+2021-01-01,Ramipril,537867.0
+2021-02-01,Ramipril,501344.0
+2021-03-01,Ramipril,486403.0
+2021-04-01,Ramipril,523376.0
+2021-05-01,Ramipril,473904.0
+2021-06-01,Ramipril,445417.0
+2021-07-01,Ramipril,490525.0
+2021-08-01,Ramipril,531515.0
+2021-09-01,Ramipril,527635.0
+2021-10-01,Ramipril,485706.0
+2021-11-01,Ramipril,509985.0
+2021-12-01,Ramipril,601617.0
+2022-01-01,Ramipril,424364.0
+2022-02-01,Ramipril,90190.0
+2022-03-01,Ramipril,566942.0
+2022-04-01,Ramipril,521685.0
+2022-05-01,Ramipril,238021.0
+2022-06-01,Ramipril,524027.0
+2022-07-01,Ramipril,265074.0
+2022-08-01,Ramipril,539302.0
+2022-09-01,Ramipril,477140.0
+2022-10-01,Ramipril,506922.0
+2022-11-01,Ramipril,620798.0
+2022-12-01,Ramipril,625049.0
+2023-01-01,Ramipril,482997.0
+2023-02-01,Ramipril,468554.0
+2023-03-01,Ramipril,476799.0
+2023-04-01,Ramipril,542131.0
+2023-05-01,Ramipril,615134.0
+2023-06-01,Ramipril,516207.0
+2023-07-01,Ramipril,488034.0
+2023-08-01,Ramipril,499559.0
+2023-09-01,Ramipril,553750.0
+2023-10-01,Ramipril,602818.0
+2023-11-01,Ramipril,563843.0
+2023-12-01,Ramipril,499974.0
+2024-01-01,Ramipril,558604.0
+2024-02-01,Ramipril,512173.0
+2024-03-01,Ramipril,563702.0
+2024-04-01,Ramipril,527367.0
+2024-05-01,Ramipril,572079.0
+2024-06-01,Ramipril,591179.0
+2024-07-01,Ramipril,619407.0
+2024-08-01,Ramipril,91916.0
+2024-09-01,Ramipril,536364.0
+2024-10-01,Ramipril,545410.0
+2024-11-01,Ramipril,579782.0
+2024-12-01,Ramipril,505819.0
+2025-01-01,Ramipril,568437.0
+2025-02-01,Ramipril,489207.0
+2025-03-01,Ramipril,284151.0
+2025-04-01,Ramipril,518882.0
+2025-05-01,Ramipril,515093.0
+2025-06-01,Ramipril,592230.0
+2025-07-01,Ramipril,522907.0
+2025-08-01,Ramipril,540734.0
+2025-09-01,Ramipril,307294.0
+2025-10-01,Ramipril,686834.0
+2025-11-01,Ramipril,533823.0
+2025-12-01,Ramipril,488923.0
+2026-01-01,Ramipril,550642.0
+2026-02-01,Ramipril,484190.0
+2026-03-01,Ramipril,571660.0
+2020-11-01,Venlafaxine,84613.0
+2020-12-01,Venlafaxine,90598.0
+2021-01-01,Venlafaxine,86680.0
+2021-02-01,Venlafaxine,89000.0
+2021-03-01,Venlafaxine,95460.0
+2021-04-01,Venlafaxine,84474.0
+2021-05-01,Venlafaxine,84545.0
+2021-06-01,Venlafaxine,93477.0
+2021-07-01,Venlafaxine,83815.0
+2021-08-01,Venlafaxine,83949.0
+2021-09-01,Venlafaxine,95842.0
+2021-10-01,Venlafaxine,85240.0
+2021-11-01,Venlafaxine,94129.0
+2021-12-01,Venlafaxine,104099.0
+2022-01-01,Venlafaxine,95771.0
+2022-02-01,Venlafaxine,13851.0
+2022-03-01,Venlafaxine,90999.0
+2022-04-01,Venlafaxine,91669.0
+2022-05-01,Venlafaxine,46936.0
+2022-06-01,Venlafaxine,91728.0
+2022-07-01,Venlafaxine,50582.0
+2022-08-01,Venlafaxine,84394.0
+2022-09-01,Venlafaxine,96342.0
+2022-10-01,Venlafaxine,92444.0
+2022-11-01,Venlafaxine,99732.0
+2022-12-01,Venlafaxine,96735.0
+2023-01-01,Venlafaxine,94243.0
+2023-02-01,Venlafaxine,86026.0
+2023-03-01,Venlafaxine,94196.0
+2023-04-01,Venlafaxine,90534.0
+2023-05-01,Venlafaxine,99415.0
+2023-06-01,Venlafaxine,93618.0
+2023-07-01,Venlafaxine,91058.0
+2023-08-01,Venlafaxine,93057.0
+2023-09-01,Venlafaxine,92026.0
+2023-10-01,Venlafaxine,95187.0
+2023-11-01,Venlafaxine,111670.0
+2023-12-01,Venlafaxine,98251.0
+2024-01-01,Venlafaxine,105713.0
+2024-02-01,Venlafaxine,100528.0
+2024-03-01,Venlafaxine,92410.0
+2024-04-01,Venlafaxine,101509.0
+2024-05-01,Venlafaxine,101104.0
+2024-06-01,Venlafaxine,95363.0
+2024-07-01,Venlafaxine,115714.0
+2024-08-01,Venlafaxine,16385.0
+2024-09-01,Venlafaxine,99678.0
+2024-10-01,Venlafaxine,96740.0
+2024-11-01,Venlafaxine,95060.0
+2024-12-01,Venlafaxine,92515.0
+2025-01-01,Venlafaxine,105036.0
+2025-02-01,Venlafaxine,102536.0
+2025-03-01,Venlafaxine,45609.0
+2025-04-01,Venlafaxine,98406.0
+2025-05-01,Venlafaxine,115116.0
+2025-06-01,Venlafaxine,93904.0
+2025-07-01,Venlafaxine,111546.0
+2025-08-01,Venlafaxine,97779.0
+2025-09-01,Venlafaxine,49206.0
+2025-10-01,Venlafaxine,99814.0
+2025-11-01,Venlafaxine,93289.0
+2025-12-01,Venlafaxine,107230.0
+2026-01-01,Venlafaxine,108526.0
+2026-02-01,Venlafaxine,100488.0
+2026-03-01,Venlafaxine,104241.0
