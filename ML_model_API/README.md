@@ -1,46 +1,41 @@
 # Drug Demand Forecasting API
 
-A production-ready drug demand forecasting system built using **Prophet**, **FastAPI**, **Docker**, and **Pydantic**. The project forecasts future demand for commonly prescribed drugs and exposes predictions through a REST API for easy integration into inventory management, supply chain, and healthcare analytics systems.
+A production-ready Drug Demand Forecasting system built using Prophet, FastAPI, Docker, and Python. The application forecasts future demand for commonly prescribed drugs using historical prescription data and exposes predictions through a REST API.
 
 ---
 
-# Project Overview
+# Overview
 
-Healthcare providers and pharmacies require accurate drug demand forecasts to:
+Healthcare organizations and pharmacies require accurate demand forecasts to optimize inventory management, procurement planning, and supply chain operations.
 
-* Prevent stock shortages
-* Reduce overstocking costs
-* Improve procurement planning
-* Support inventory optimization
-* Enable data-driven supply chain decisions
-
-This project uses historical drug demand data to train separate forecasting models for multiple drugs and serves predictions through a FastAPI backend.
+This project leverages historical prescription demand data to train Prophet-based forecasting models for multiple drugs. Each drug has its own dedicated forecasting model, enabling future demand estimation for customizable forecast horizons. The trained models are served through a FastAPI backend, providing a scalable and easy-to-consume API for healthcare analytics and inventory planning.
 
 ---
 
 # Features
 
 * Multi-drug demand forecasting
-* Dynamic forecast horizon (1–60 months)
 * Prophet-based time series forecasting
+* Dynamic forecast horizon (1–60 months)
 * Forecast confidence intervals
 * Cumulative demand calculation
-* Input validation using Pydantic
-* Health monitoring endpoints
+* FastAPI REST API
+* Pydantic request validation
+* Health check endpoints
 * Dockerized deployment
-* Interactive Swagger documentation
-* Production-ready REST API
+* Swagger UI documentation
+* Pre-trained model support
 
 ---
 
 # Supported Drugs
 
-The API currently supports forecasting for:
+The API currently supports the following drugs:
 
 * Atorvastatin
 * Gabapentin
-* Levothyroxine sodium
-* Metformin hydrochloride
+* Levothyroxine Sodium
+* Metformin Hydrochloride
 * Paracetamol
 * Pregabalin
 * Ramipril
@@ -50,14 +45,14 @@ The API currently supports forecasting for:
 
 # Tech Stack
 
+## Machine Learning
+
+* Prophet
+
 ## Backend
 
 * FastAPI
 * Uvicorn
-
-## Machine Learning
-
-* Prophet
 
 ## Data Processing
 
@@ -76,21 +71,39 @@ The API currently supports forecasting for:
 
 * Docker
 
-## Documentation
-
-* OpenAPI (Swagger)
-* ReDoc
-
 ## Language
 
 * Python 3.12
 
 ---
 
+# Architecture Flow
+
+```text
+Historical Drug Demand Data
+            │
+            ▼
+      Prophet Training
+            │
+            ▼
+     Saved Models (.joblib)
+            │
+            ▼
+         FastAPI API
+            │
+            ▼
+      Forecast Endpoint
+            │
+            ▼
+       JSON Response
+```
+
+---
+
 # Project Structure
 
 ```text
-drug-demand-forecasting/
+ML_model_API/
 │
 ├── data/
 │   └── nhs_drug_forecasting_dataset_final.csv
@@ -106,10 +119,10 @@ drug-demand-forecasting/
 │   ├── Atorvastatin_prophet.pkl
 │   ├── Gabapentin_prophet.joblib
 │   ├── Gabapentin_prophet.pkl
-│   ├── Levothyroxine sodium_prophet.joblib
-│   ├── Levothyroxine sodium_prophet.pkl
-│   ├── Metformin hydrochloride_prophet.joblib
-│   ├── Metformin hydrochloride_prophet.pkl
+│   ├── Levothyroxine Sodium_prophet.joblib
+│   ├── Levothyroxine Sodium_prophet.pkl
+│   ├── Metformin Hydrochloride_prophet.joblib
+│   ├── Metformin Hydrochloride_prophet.pkl
 │   ├── Paracetamol_prophet.joblib
 │   ├── Paracetamol_prophet.pkl
 │   ├── Pregabalin_prophet.joblib
@@ -124,86 +137,22 @@ drug-demand-forecasting/
 ├── Dockerfile
 ├── requirements.txt
 ├── README.md
-│
-├── .gitignore
-│
-├── __pycache__/
-│
-└── venv/
+└── .gitignore
 ```
 
 ---
 
-# Understanding the Files
+# How the System Works
 
-## main.py
+## 1. Data Ingestion
 
-Responsible for:
-
-* Loading historical demand data
-* Training Prophet models
-* Saving trained models
-* Generating future forecasts
-* Exporting forecast results
-
-Outputs:
+Historical drug demand data is loaded from:
 
 ```text
-saved_models/*.joblib
-saved_models/*.pkl
-forecasts/drug_forecasts_next_12_months.csv
+data/nhs_drug_forecasting_dataset_final.csv
 ```
 
----
-
-## app.py
-
-FastAPI application responsible for:
-
-* Request validation
-* Model loading
-* Forecast generation
-* API response handling
-* Health checks
-
-Endpoints:
-
-```http
-GET  /
-GET  /health
-GET  /health/model
-POST /forecast
-```
-
----
-
-## saved_models/
-
-Contains serialized Prophet models.
-
-Example:
-
-```text
-Paracetamol_prophet.joblib
-```
-
-Each model is trained independently using historical demand data for a single drug.
-
----
-
-## data/
-
-Stores the original dataset used during model training.
-
-Expected columns:
-
-```text
-drug
-ds
-y
-```
-
-Where:
+Dataset fields:
 
 | Column | Description  |
 | ------ | ------------ |
@@ -213,33 +162,9 @@ Where:
 
 ---
 
-## forecasts/
+## 2. Model Training
 
-Stores generated forecast outputs.
-
-Example:
-
-```text
-drug_forecasts_next_12_months.csv
-```
-
----
-
-# Forecasting Pipeline
-
-## Step 1: Load Data
-
-Historical demand data is loaded from:
-
-```text
-data/nhs_drug_forecasting_dataset_final.csv
-```
-
----
-
-## Step 2: Train Individual Models
-
-A separate Prophet model is trained for each drug.
+A separate Prophet model is trained for each supported drug.
 
 Configuration:
 
@@ -253,22 +178,22 @@ Prophet(
 
 ---
 
-## Step 3: Save Models
+## 3. Model Serialization
 
-Models are serialized and stored as:
+Each trained model is saved as:
 
 ```text
 saved_models/*.joblib
 saved_models/*.pkl
 ```
 
+This allows inference without retraining.
+
 ---
 
-## Step 4: Generate Forecasts
+## 4. Forecast Generation
 
-Each model forecasts future demand values.
-
-Forecast output contains:
+The model forecasts future demand values and generates:
 
 * Predicted demand
 * Lower confidence interval
@@ -276,13 +201,12 @@ Forecast output contains:
 
 ---
 
-## Step 5: Export Forecast Results
+## 5. API Inference
 
-Results are exported as:
+The FastAPI application loads the appropriate model and returns forecasts based on:
 
-```text
-forecasts/drug_forecasts_next_12_months.csv
-```
+* Drug name
+* Forecast horizon
 
 ---
 
@@ -325,7 +249,7 @@ GET /health
 
 ---
 
-## Model Health
+## Model Health Check
 
 ### Request
 
@@ -388,30 +312,24 @@ POST /forecast
 
 ```bash
 git clone <repository-url>
-cd drug-demand-forecasting
+cd ML_model_API
 ```
-
----
 
 ## Create Virtual Environment
-
-```bash
-python -m venv venv
-```
 
 ### Windows
 
 ```bash
+python -m venv venv
 venv\Scripts\activate
 ```
 
 ### Linux / Mac
 
 ```bash
+python -m venv venv
 source venv/bin/activate
 ```
-
----
 
 ## Install Dependencies
 
@@ -427,7 +345,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-This generates:
+Outputs:
 
 ```text
 saved_models/
@@ -436,29 +354,43 @@ forecasts/drug_forecasts_next_12_months.csv
 
 ---
 
-## Start API
+## Run FastAPI
 
 ```bash
 uvicorn app:app --reload
 ```
 
-Open:
+Swagger UI:
 
 ```text
 http://localhost:8000/docs
 ```
 
+ReDoc:
+
+```text
+http://localhost:8000/redoc
+```
+
 ---
 
-# Running with Docker
+# Sample API Request
 
-## Build Docker Image
+```bash
+curl -X POST "http://localhost:8000/forecast" \
+-H "Content-Type: application/json" \
+-d "{\"drug_name\":\"Paracetamol\",\"months\":12}"
+```
+
+---
+
+# Docker Deployment
+
+## Build Image
 
 ```bash
 docker build -t drug-demand-forecasting .
 ```
-
----
 
 ## Run Container
 
@@ -466,7 +398,7 @@ docker build -t drug-demand-forecasting .
 docker run -p 8000:8000 drug-demand-forecasting
 ```
 
-Open:
+Swagger UI:
 
 ```text
 http://localhost:8000/docs
@@ -493,29 +425,3 @@ Run Container:
 ```bash
 docker run -p 8000:8000 arijeetnath9000/drug-demand-forecasting:latest
 ```
-
-Swagger Documentation:
-
-```text
-http://localhost:8000/docs
-```
-
----
-
-# Future Improvements
-
-* CI/CD Pipeline using GitHub Actions
-* Kubernetes Deployment
-* MLflow Model Tracking
-* Model Versioning
-* Automated Retraining Pipeline
-* Logging and Monitoring
-* Cloud Deployment (AWS, Azure, GCP)
-* Authentication and Authorization
-* Real-Time Forecast Monitoring
-
----
-
-# Author
-
-Drug Demand Forecasting API built using FastAPI, Prophet, Docker, and Python for healthcare demand forecasting and inventory planning.
