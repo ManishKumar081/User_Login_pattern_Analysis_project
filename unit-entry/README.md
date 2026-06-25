@@ -1,16 +1,168 @@
-# React + Vite
+# Unit Entry Module
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Module Description
 
-Currently, two official plugins are available:
+The Unit Entry Module is designed to manage measurement units used throughout the Stock Management System. This module allows users to create, edit, view, search, and delete unit records through a user-friendly interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application is developed using React.js for the frontend and FastAPI for the backend.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features Implemented
 
-## Expanding the ESLint configuration
+### Frontend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Professional React User Interface
+* Unit Code Entry
+* Unit Name Entry
+* Description Entry
+* Status Management (Active / Inactive)
+* Search Functionality
+* Edit Existing Units
+* Delete Units
+* Responsive Layout
+* Material UI Components
+
+### Backend Features
+
+* FastAPI REST API
+* POST API for Saving Unit Details
+* GET API for Retrieving Unit Details
+* CORS Configuration for Frontend Integration
+* In-Memory Data Storage for Demonstration
+
+---
+
+## Integration
+
+* Axios Integration
+* Frontend and Backend Communication
+* API Testing Completed
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* React.js
+* JavaScript
+* Material UI (MUI)
+* HTML
+* CSS
+* Axios
+* React Router
+
+### Backend
+
+* FastAPI
+* Python
+* Uvicorn
+
+---
+
+## Project Structure
+
+Unit_Entry
+
+├── backend
+
+│ └── main.py
+
+│
+
+├── src
+
+│ ├── components
+
+│ ├── data
+
+│ ├── pages
+
+│ ├── App.jsx
+
+│ └── main.jsx
+
+│
+
+├── package.json
+
+├── package-lock.json
+
+├── README.md
+
+└── vite.config.js
+
+---
+
+## API Endpoints
+
+### Save Unit
+
+POST /unit
+
+### Sample Request
+
+```json
+{
+  "unit_code": "KG",
+  "unit_name": "Kilogram",
+  "description": "Unit of Weight",
+  "status": "Active"
+}
+```
+
+### Get Units
+
+GET /unit
+
+### Sample Response
+
+```json
+[
+  {
+    "unit_code": "KG",
+    "unit_name": "Kilogram",
+    "description": "Unit of Weight",
+    "status": "Active"
+  }
+]
+```
+
+---
+
+## Validation Rules
+
+* Unit Code is required
+* Unit Name is required
+* Empty submissions are not allowed
+
+---
+
+## Functionalities
+
+* Add New Unit
+* View Unit List
+* Search Units
+* Edit Unit Details
+* Delete Units
+* Manage Active / Inactive Status
+
+---
+
+## Testing Status
+
+* UI Testing Completed
+* Form Validation Tested
+* API Integration Tested
+* POST API Tested
+* GET API Tested
+* End-to-End Testing Completed
+
+---
+
+## Assigned Task
+
+Module: Unit Entry
+
+Status: Completed and Ready for Integration
