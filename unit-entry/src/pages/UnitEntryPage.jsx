@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import axios from "axios";
 import { unitOptions } from "../data/unitOptions";
 
 import Autocomplete from "@mui/material/Autocomplete";
@@ -45,46 +46,63 @@ export default function UnitEntryPage() {
     },
   ]);
 
-  const handleSave = () => {
-    if (!unitCode || !unitName) {
-      alert("Unit Code and Unit Name are required");
-      return;
-    }
+useEffect(() => {
+  fetchUnits();
+}, []);
 
-    if (editId) {
-      setUnits(
-        units.map((unit) =>
-          unit.id === editId
-            ? {
-                ...unit,
-                unitCode,
-                unitName,
-                description,
-                status,
-              }
-            : unit
-        )
-      );
+const fetchUnits = async () => {
+  try {
+    const response = await axios.get(
+      "http://127.0.0.1:8000/unit"
+    );
 
-      setEditId(null);
-    } else {
-      const newUnit = {
-        id: Date.now(),
-        unitCode,
-        unitName,
+    const formattedUnits = response.data.map(
+      (u, index) => ({
+        id: index + 1,
+        unitCode: u.unit_code,
+        unitName: u.unit_name,
+        description: u.description,
+        status: u.status,
+        createdDate: new Date().toLocaleDateString(),
+      })
+    );
+
+    setUnits(formattedUnits);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+ const handleSave = async () => {
+  if (!unitCode || !unitName) {
+    alert("Unit Code and Unit Name are required");
+    return;
+  }
+
+  try {
+    const response = await axios.post(
+      "http://127.0.0.1:8000/unit",
+      {
+        unit_code: unitCode,
+        unit_name: unitName,
         description,
         status,
-        createdDate: new Date().toLocaleDateString(),
-      };
+      }
+    );
 
-      setUnits([...units, newUnit]);
-    }
+    alert(response.data.message);
+
+    fetchUnits();
 
     setUnitCode("");
     setUnitName("");
     setDescription("");
     setStatus("Active");
-  };
+  } catch (error) {
+    console.error(error);
+    alert("Failed to save unit");
+  }
+};
 
   const handleDelete = (id) => {
     if (
