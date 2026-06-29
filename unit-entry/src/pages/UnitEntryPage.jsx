@@ -27,24 +27,7 @@ export default function UnitEntryPage() {
   const [editId, setEditId] = useState(null);
   const [status, setStatus] = useState("Active");
 
-  const [units, setUnits] = useState([
-    {
-      id: 1,
-      unitCode: "KG",
-      unitName: "Kilogram",
-      description: "Weight Unit",
-      status: "Active",
-      createdDate: "06/15/2026",
-    },
-    {
-      id: 2,
-      unitCode: "PCS",
-      unitName: "Pieces",
-      description: "Count Unit",
-      status: "Inactive",
-      createdDate: "06/15/2026",
-    },
-  ]);
+  const [units, setUnits] = useState([]);
 
 useEffect(() => {
   fetchUnits();
@@ -57,8 +40,8 @@ const fetchUnits = async () => {
     );
 
     const formattedUnits = response.data.map(
-      (u, index) => ({
-        id: index + 1,
+      (u) => ({
+        id: u.id,
         unitCode: u.unit_code,
         unitName: u.unit_name,
         description: u.description,
@@ -80,17 +63,35 @@ const fetchUnits = async () => {
   }
 
   try {
-    const response = await axios.post(
-      "http://127.0.0.1:8000/unit",
-      {
-        unit_code: unitCode,
-        unit_name: unitName,
-        description,
-        status,
-      }
-    );
 
-    alert(response.data.message);
+    if (editId) {
+
+      await axios.put(
+        `http://127.0.0.1:8000/unit/${editId}`,
+        {
+          unit_code: unitCode,
+          unit_name: unitName,
+          description,
+          status,
+        }
+      );
+
+      alert("Unit updated successfully");
+
+    } else {
+
+      await axios.post(
+        "http://127.0.0.1:8000/unit",
+        {
+          unit_code: unitCode,
+          unit_name: unitName,
+          description,
+          status,
+        }
+      );
+
+      alert("Unit saved successfully");
+    }
 
     fetchUnits();
 
@@ -98,31 +99,46 @@ const fetchUnits = async () => {
     setUnitName("");
     setDescription("");
     setStatus("Active");
+    setEditId(null);
+
   } catch (error) {
+
     console.error(error);
-    alert("Failed to save unit");
+    alert("Operation failed");
+
   }
 };
 
-  const handleDelete = (id) => {
-    if (
-      window.confirm(
-        "Are you sure you want to delete this unit?"
-      )
-    ) {
-      setUnits(
-        units.filter((unit) => unit.id !== id)
-      );
-    }
-  };
+  
 
-  const handleEdit = (unit) => {
-    setUnitCode(unit.unitCode);
-    setUnitName(unit.unitName);
-    setDescription(unit.description);
-    setStatus(unit.status);
-    setEditId(unit.id);
-  };
+ const handleDelete = async (id) => {
+
+  if (!window.confirm("Are you sure you want to delete this unit?"))
+    return;
+
+  try {
+
+    await axios.delete(
+      `http://127.0.0.1:8000/unit/${id}`
+    );
+
+    fetchUnits();
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert("Delete failed");
+
+  }
+};
+const handleEdit = (unit) => {
+  setUnitCode(unit.unitCode);
+  setUnitName(unit.unitName);
+  setDescription(unit.description);
+  setStatus(unit.status);
+  setEditId(unit.id);
+};
 
   return (
     <Box sx={{ p: 3 }}>
