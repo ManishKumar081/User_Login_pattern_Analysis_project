@@ -1,0 +1,198 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  background:#f4f7fb;
+}
+
+/* MAIN LAYOUT */
+
+.app{
+  display:flex;
+  min-height:100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+  width:240px;
+  background:#0b2c54;
+  color:white;
+  padding:25px 18px;
+  position:fixed;
+  height:100vh;
+  left:0;
+  top:0;
+}
+
+.logo{
+  text-align:center;
+  margin-bottom:35px;
+  font-size:26px;
+  font-weight:700;
+}
+
+.sidebar ul{
+  list-style:none;
+}
+
+.sidebar li{
+  padding:14px;
+  margin-bottom:14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:17px;
+  transition:0.3s;
+}
+
+.sidebar li:hover{
+  background:#1d4ed8;
+}
+
+.active{
+  background:#2563eb;
+}
+
+
+/* MAIN AREA */
+
+.main{
+  margin-left:240px;
+  width:calc(100% - 240px);
+}
+
+
+/* HEADER */
+
+.header{
+  background:white;
+  padding:20px 35px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.header h1{
+  color:#0b2c54;
+  font-size:30px;
+  font-weight:700;
+}
+
+.profile{
+  background:#2563eb;
+  color:white;
+  padding:12px 22px;
+  border-radius:8px;
+  font-weight:600;
+}
+
+
+/* CONTENT */
+
+.content{
+  padding:25px;
+}
+
+
+/* CARDS */
+
+.card{
+  background:white;
+  padding:25px;
+  margin-bottom:20px;
+  border-radius:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h2{
+  color:#0b2c54;
+  margin-bottom:20px;
+  font-size:24px;
+}
+
+
+/* GRID */
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-bottom:18px;
+}
+
+
+/* INPUTS */
+
+input,
+textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  font-size:15px;
+  background:#ffffff;
+  color:#111827;
+  outline:none;
+}
+
+input:focus,
+textarea:focus{
+  border:1px solid #2563eb;
+}
+
+textarea{
+  height:110px;
+  resize:none;
+  margin-bottom:18px;
+}
+
+
+/* BUTTONS */
+
+.button-group{
+  display:flex;
+  justify-content:flex-end;
+  gap:14px;
+}
+
+button{
+  border:none;
+  padding:12px 22px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.reset-btn{
+  background:#e5e7eb;
+}
+
+.reset-btn:hover{
+  background:#d1d5db;
+}
+
+.draft-btn{
+  background:#94a3b8;
+  color:white;
+}
+
+.draft-btn:hover{
+  background:#64748b;
+}
+
+.save-btn{
+  background:#2563eb;
+  color:white;
+}
+
+.save-btn:hover{
+  background:#1d4ed8;
+}
