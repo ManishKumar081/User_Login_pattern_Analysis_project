@@ -33,22 +33,37 @@ function SupplierEntry() {
       const response = await axios.post(
         "http://127.0.0.1:8000/supplier",
         {
-          supplier_name: supplierName,
-          address: address,
+          supplier_name: supplierName.trim(),
+          address: address.trim(),
         }
       );
 
-      setMessage(response.data.message);
-      setMessageType("success");
+      if (response.data.status === "success") {
+         setMessage(response.data.message);
+         setMessageType("success");
 
-      setSupplierName("");
-      setAddress("");
-      setErrors({});
+         // Clear form after successful save
+         setSupplierName("");
+         setAddress("");
+         setErrors({});
+         } 
+      else {
+          // Duplicate supplier or any other error returned by API
+         setMessage(response.data.message);
+         setMessageType("error");
+         }
     } catch (error) {
       console.error(error);
 
-      setMessage("Failed to save supplier");
-      setMessageType("error");
+      if (error.response && error.response.data.message) {
+         setMessage(error.response.data.message);
+        } 
+      else {
+         setMessage("Failed to save supplier");
+        }
+
+         setMessageType("error");
+
     } finally {
       setLoading(false);
     }
@@ -115,6 +130,7 @@ function SupplierEntry() {
               onChange={(e) => {
                 setSupplierName(e.target.value);
                 setMessage("");
+                setErrors({ ...errors, supplierName: "" });
               }}
               placeholder="Enter Supplier Name"
               style={{
@@ -158,6 +174,7 @@ function SupplierEntry() {
               onChange={(e) => {
                 setAddress(e.target.value);
                 setMessage("");
+                setErrors({ ...errors, address: "" });
               }}
               placeholder="Enter Supplier Address"
               style={{
