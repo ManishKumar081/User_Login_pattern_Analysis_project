@@ -1,0 +1,212 @@
+import React, { useEffect, useState } from "react";
+
+const ManufacturerEntry = () => {
+  const [formData, setFormData] = useState({
+    manufacturerCode: "",
+    name: "",
+    contactPerson: "",
+    email: "",
+    phone: "",
+    address: "",
+    gstNumber: "",
+    isActive: true,
+  });
+
+  const [list, setList] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  const API = "https://yourdomain.com/api/manufacturers";
+
+  // 📥 Load manufacturers
+  const loadData = async () => {
+    try {
+      setLoading(true);
+      const res = await fetch(API);
+      const data = await res.json();
+      setList(data);
+    } catch (err) {
+      console.error("Load error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  // 💾 Save manufacturer
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      setSaving(true);
+
+      const res = await fetch(API, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("Manufacturer saved successfully");
+
+        setFormData({
+          manufacturerCode: "",
+          name: "",
+          contactPerson: "",
+          email: "",
+          phone: "",
+          address: "",
+          gstNumber: "",
+          isActive: true,
+        });
+
+        loadData(); // refresh list
+      }
+    } catch (err) {
+      console.error("Save error:", err);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 bg-gray-50 min-h-screen">
+
+      {/* 🏭 ENTRY FORM */}
+      <div className="bg-white p-6 rounded shadow">
+        <h2 className="text-xl font-bold mb-4">🏭 Manufacturer Entry</h2>
+
+        <form onSubmit={handleSubmit} className="space-y-3">
+
+          <input
+            className="w-full border p-2 rounded"
+            placeholder="Manufacturer Code (Auto / Manual)"
+            value={formData.manufacturerCode}
+            onChange={(e) =>
+              setFormData({ ...formData, manufacturerCode: e.target.value })
+            }
+          />
+
+          <input
+            className="w-full border p-2 rounded"
+            placeholder="Manufacturer Name *"
+            value={formData.name}
+            required
+            onChange={(e) =>
+              setFormData({ ...formData, name: e.target.value })
+            }
+          />
+
+          <input
+            className="w-full border p-2 rounded"
+            placeholder="Contact Person"
+            value={formData.contactPerson}
+            onChange={(e) =>
+              setFormData({ ...formData, contactPerson: e.target.value })
+            }
+          />
+
+          <input
+            className="w-full border p-2 rounded"
+            placeholder="Email"
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+          />
+
+          <input
+            className="w-full border p-2 rounded"
+            placeholder="Phone"
+            value={formData.phone}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
+          />
+
+          <textarea
+            className="w-full border p-2 rounded"
+            placeholder="Address"
+            value={formData.address}
+            onChange={(e) =>
+              setFormData({ ...formData, address: e.target.value })
+            }
+          />
+
+          <input
+            className="w-full border p-2 rounded"
+            placeholder="GST Number"
+            value={formData.gstNumber}
+            onChange={(e) =>
+              setFormData({ ...formData, gstNumber: e.target.value })
+            }
+          />
+
+          <label className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={formData.isActive}
+              onChange={(e) =>
+                setFormData({ ...formData, isActive: e.target.checked })
+              }
+            />
+            Active
+          </label>
+
+          <button
+            type="submit"
+            disabled={saving}
+            className="w-full bg-blue-600 text-white p-2 rounded"
+          >
+            {saving ? "Saving..." : "Save Manufacturer"}
+          </button>
+        </form>
+      </div>
+
+      {/* 📊 LIST TABLE */}
+      <div className="bg-white p-6 rounded shadow">
+        <h2 className="text-xl font-bold mb-4">📊 Manufacturer List</h2>
+
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div className="overflow-auto">
+            <table className="w-full border text-sm">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border p-2">Code</th>
+                  <th className="border p-2">Name</th>
+                  <th className="border p-2">Contact</th>
+                  <th className="border p-2">Phone</th>
+                  <th className="border p-2">Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {list.map((item, index) => (
+                  <tr key={index}>
+                    <td className="border p-2">{item.manufacturerCode}</td>
+                    <td className="border p-2">{item.name}</td>
+                    <td className="border p-2">{item.contactPerson}</td>
+                    <td className="border p-2">{item.phone}</td>
+                    <td className="border p-2">
+                      {item.isActive ? "Active" : "Inactive"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+
+    </div>
+  );
+};
+
+export default ManufacturerEntry;
